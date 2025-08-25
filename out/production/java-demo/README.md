@@ -112,7 +112,7 @@ public class demo_继承_儿子 extends demo_继承_爹 {
 
 ### 多态的优势和劣势
 
-**实现条件**
+#### 实现条件
 
 1. 存在继承关系
 2. 子类重写父类的方法
@@ -208,68 +208,4 @@ equals：用来比较的是两个对象的内容是否相等，由于所有的�
 > 阿里的代码规范中只使用equals
 >
 > `所有比较是否相等是，都是用equals并且在对常量相比较是，把常量写在前面，因为使用object的equals object可能为null 则空指针`
-
-### this关键字
-
-1. 引用当前对象
-2. 解决命名冲突
-3. 在构造方法中引用其他构造方法
-
-> this关键字只能在实例方法和构造方法中使用，不能再静态方法中使用。因为静态方法不依赖于具体的对象实例，所以在静态方法中无法引用this关键字。
-
-**this关键字用于引用当前对象，解决命名冲突，以及在构造方法中引用其他构造方法。通过this关键字，我们可以更方便的访问对象的成员变量和调用当前对象的方法。**
-
-### Java中的super关键字
-
-在Java中，super是一个特殊的关键字，用于引用父类（超类）的成员或调用父类的构造方法。
-
-1. 引用父类的成员
-   - 当子类和父类有同名的成员变量或方法时，可以使用super关键字来引用父类的成员。
-   - 通过super关键字，可以明确指定要访问的父类的成员，而不是子类的成员
-2. 调用父类的构造方法
-   - 当子类继承父类的时候，可以使用super关键字来调用父类的构造方法
-   - 在子类的构造方法中使用super关键字调用父类的构造方法，可以完成对父类的初始化操作
-
-```java
-// 父类
-class Animal {
-    String name = "动物";
-    Animal() {
-        System.out.println("Animal 的无参构造方法被调用");
-    }
-    void show() {
-        System.out.println("我是父类 Animal 的 show 方法");
-    }
-}
-
-// 子类
-class Dog extends Animal {
-    String name = "狗";
-    Dog() {
-        // 调用父类构造方法
-        super();
-        System.out.println("Dog 的无参构造方法被调用");
-    }
-    void show() {
-        System.out.println("我是子类 Dog 的 show 方法");
-    }
-    void printInfo() {
-        // 访问父类成员变量
-        System.out.println("父类 name: " + super.name);
-        // 访问子类成员变量
-        System.out.println("子类 name: " + this.name);
-        // 调用父类方法
-        super.show();
-        // 调用子类方法
-        this.show();
-    }
-}
-
-public class demo_super {
-    public static void main(String[] args) {
-        Dog dog = new Dog();
-        dog.printInfo();
-    }
-}
-```
 
