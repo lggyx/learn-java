@@ -4,7 +4,6 @@ public class demo_接口 {
         Person p = new Student("Students");
         p.run();
     }
-
 }
 
 interface Person {
@@ -17,11 +16,9 @@ interface Person {
 
 class Student implements Person {
     private String name;
-
     public Student(String name) {
         this.name = name;
     }
-
     @Override
     public String getName() {
         return this.name;
