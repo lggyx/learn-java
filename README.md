@@ -273,3 +273,21 @@ public class demo_super {
 }
 ```
 
+### static关键字的作用
+
+1. 修饰变量
+2. 修饰方法
+3. 静态代码块
+4. 静态内部类
+
+```java
+static int staticVar=0;//修饰变量
+static void staticMethod(){...}//修饰方法
+static {
+    int a=1;
+    String b="1";
+    System.out.printIn("1");
+}//静态代码块
+
+```
+
