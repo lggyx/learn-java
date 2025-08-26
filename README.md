@@ -324,4 +324,81 @@ Object类所有类的根类，在Java中，每个类都直接或间接继承这�
 | finalize              | 用于资源释放（不推荐）                                       |
 | clone                 | 创建并返回当前对象的一个拷贝。**使用该方法，对象所属的类必须实现Cloneable接口**，可以用于实现深拷贝，即复制对象及其引用 |
 | wait,notify,notifyAll | 用于线程间的通信和同步。这些方法搭配**synchronized**关键字使用，使用线程的等待和唤醒机制 |
+| instanceof            | 判断对象是否属于某个类或其子类的实例。用于类型检查，以确保对象在类型转换之前是安全的 |
+
+### String，StringBuffer，StringBuilder区别
+
+#### 可变性
+
+String是不可变的类，即一旦创建了字符串对象，就不能修改其内容。
+
+StringBuffer和StringBuilder是可变的类，他们支持对字符串进行动态修改（**CRUD**）
+
+#### 线程安全性
+
+String是线程安全的，适用于多线程环境。
+
+StringBuffer是线程安全的，他的方法使用了syncchronized关键字进行同步，保证了多线程环境下的安全性。
+
+StringBuilder是非线程安全的，他的方法没有进行同步处理。**在单线程环境下，StringBuilder的性能比StringBuffer更高**。
+
+#### 性能
+
+String的不可变性给它带来了一些性能上的优化，比如字符串常量池的使用。
+
+SringBuffer和StringBuilder的可变性-->更好的的操作性能
+
+### 自动拆箱封箱
+
+- 装箱-->自动将基本数据类型转换为包装器类型
+- 拆箱-->自动将包装器类型转换为基本数据类型
+
+```java
+public class demo_拆箱封箱 {
+    public static void main(String[] args) {
+        // 装箱
+        int num = 10;
+        Integer boxedNum = num; // 自动装箱
+        System.out.println("装箱后的值：" + boxedNum);
+
+        // 拆箱
+        Integer anotherBoxedNum = 20;
+        int unboxedNum = anotherBoxedNum; // 自动拆箱
+        System.out.println("拆箱后的值：" + unboxedNum);
+    }
+}
+```
+
+### ArrayList特点及应用场景
+
+1. 动态数组
+2. 随机访问
+3. 允许存储重复元素
+4. 非线程安全
+5. 删除和插入效率较低
+6. 应用：快速访问元素，对元素进行随机频繁访问。用于保存和处理大量数据的集合。
+
+**数据量较大时或频繁进行添加和删除操作，会导致频繁的内存重新分配和数据复制，影响性能。**
+
+### LinkedList特点及应用场景
+
+1. 双向链表
+2. 高效的插入和删除
+3. 支持添加、删除、获取等操作
+4. 可用作队列和栈
+5. 非线程安全
+6. 应用场景：频繁插入删除操作 **快速索引还是使用ArrayList**
+
+### ArrayList和LinkedList的区别
+
+1. 底层数据结构：ArrayList【数组】，LinkedList【链表】
+2. 插入和删除操作
+3. 访问元素效率
+4. 空间消耗
+
+
+
+
+
+
 
