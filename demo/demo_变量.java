@@ -1,3 +1,4 @@
+package demo;
 public class demo_变量 {
     static String 变量 = "我是一个静态变量";//静态变量
     String 实例变量 = "我是一个实例变量";//实例变量

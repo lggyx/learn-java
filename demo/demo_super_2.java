@@ -1,3 +1,4 @@
+package demo;
 interface 父类接口{
     void show();
 }

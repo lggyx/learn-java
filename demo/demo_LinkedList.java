@@ -1,9 +1,10 @@
-import java.util.ArrayList;
+package demo;
+import java.util.LinkedList;
 
-public class demo_ArrayList {
+public class demo_LinkedList {
     public static void main(String[] args) {
-        // 创建ArrayList
-        ArrayList<String> list = new ArrayList<>();
+        // 创建LinkedList
+        LinkedList<String> list = new LinkedList<>();
 
         // 添加元素
         list.add("Hello");

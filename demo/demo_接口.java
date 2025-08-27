@@ -1,3 +1,4 @@
+package demo;
 public class demo_接口 {
     // interface
     public static void main(String[] args) {

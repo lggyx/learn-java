@@ -1,3 +1,4 @@
+package demo;
 public class demo_多态 {
     public static void main(String[] args) {
         Person p = new Person();

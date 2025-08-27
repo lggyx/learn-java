@@ -1,3 +1,4 @@
+package demo;
 import java.util.Arrays;
 
 public class demo_数组 {

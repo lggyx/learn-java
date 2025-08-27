@@ -1,3 +1,4 @@
+package demo;
 public class demo_Object {
     public static void main(String[] args) {
         System.out.println(("a").hashCode());

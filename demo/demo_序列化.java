@@ -1,3 +1,4 @@
+package demo;
 import java.io.*;
 
 class DemoObject implements Serializable {

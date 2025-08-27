@@ -1,3 +1,4 @@
+package demo;
 // 父类
 class Animal {
     String name = "动物";
