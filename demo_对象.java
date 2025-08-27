@@ -1,5 +1,3 @@
-import java.io.FileInputStream;
-import java.io.ObjectInputStream;
 import java.lang.reflect.Constructor;
 
 public class demo_对象 implements Cloneable {
