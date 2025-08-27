@@ -452,5 +452,25 @@ TODO：
 
 ### Java中的线程对象状态
 
+1. 新建状态 New
+2. 就绪状态 Runnable
+3. 运行状态 Running
+4. 阻塞状态 Blocked
+5. 等待状态 Waiting
+6. 超时等待状态 Timed Waiting
+7. 终止状态 Terminated
+
+**不同状态的转换是由Java虚拟机和操作系统来控制的，开发人员无法人为控制和干预线程对象的状态转换过程**
+
+
+
+
+
+
+
+
+
+
+
 
 
