@@ -1,3 +1,5 @@
 java-demo.iml
 ./out/**
 ./.idea/**
+./.pytest_cache/**
+__pycache__/
