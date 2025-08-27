@@ -1,4 +1,3 @@
-package demo;
 public class demo_拷贝 {
     public static void main(String[] args) {
         // 浅拷贝示例

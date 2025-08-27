@@ -1,4 +1,3 @@
-package demo;
 public class demo_继承_儿子 extends demo_继承_爹 {
     public static void main(String[] args) {
         String 儿子=demo_继承_爹.爹;

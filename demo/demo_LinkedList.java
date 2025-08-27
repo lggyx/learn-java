@@ -1,4 +1,3 @@
-package demo;
 import java.util.LinkedList;
 
 public class demo_LinkedList {

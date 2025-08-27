@@ -1,4 +1,3 @@
-package demo;
 public class demo_线程 {
     public static void main(String[] args) {
         // 创建线程的第一种方式：继承Thread类

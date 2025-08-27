@@ -1,4 +1,3 @@
-package demo;
 public class demo_switch {
     public static void main(String[] args) {
         Integer num = 9;

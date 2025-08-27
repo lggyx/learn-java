@@ -1,4 +1,3 @@
-package demo;
 public class demo_拆箱封箱 {
     public static void main(String[] args) {
         // 装箱

@@ -1,4 +1,3 @@
-package demo;
 public class demo_抽象类 {
 
     public static void main(String[] args) {
