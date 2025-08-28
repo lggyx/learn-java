@@ -579,9 +579,24 @@ TCP（传输控制协议）是一种可靠的传输层协议，用于在互联�
 
 > TCP具备可靠性和流控机制，适用于对数据传输的可靠性，有序性要求较高的场景，例如文件传输、电子邮件等。
 
+## API技术扩展分析
 
+### 常用日期API有哪些？
 
+#### java.time
 
+1. LocalDate
+2. LocalTime
+3. LocalDateTime
+4. Instant
+5. Duration
+6. Period
+7. ZoneId
+8. ZonedDateTime
+9. DateTimeFormatter
 
+#### java.time之外的
 
+1. Date和Calendar
+2. SimpleDateFormat
 
