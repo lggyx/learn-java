@@ -542,6 +542,14 @@ field.setAccessible(true);
 field.set(obj,newValue);
 ```
 
+### HashMap特点及应用场景
+
+1. 高效的查找和插入操作
+2. 键值对存储
+3. 无序的元素
+4. 线程不安全
+5. 可变大小
+
 
 
 
