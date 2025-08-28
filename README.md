@@ -550,9 +550,18 @@ field.set(obj,newValue);
 4. 线程不安全
 5. 可变大小
 
+HashMap适用于需要根据键快速查找对应值的场景。例如，常见的应用场景包括缓存、、数据索引，字典等。通过将键与对应的值进行关联，可以快速地进行查找和操作。
 
+> 需要注意的是，hasCode和equals的重写。由于HashMap使用键的hashCode值来确定数组索引，因此，hashCode的结果应该尽量分布均匀，以提高哈希表的性能。同时，equals方法的结果也会影响键的比较和查找。如果重写了equals方法，需要保证与hashCode方法的一致性。
 
+### LinkedHashMap特点及应用场景
 
+- 有序性
+- 高效的检索操作
+- 可变大小
+- 迭代器的一致性
+
+**LinkedHashMap适用于需要有序存储和遍历的场景。例如，在LRU（LeastRecentlyUsed）缓存实现中，可以使用LinkedHashMap来维护缓存的顺序，把最近使用的元素放在链表的头部，最少使用的元素放在链表的尾部。同时，LinkedHashMap还可以用于实现LRU近似算法的缓存淘汰策略，通过设置accessOrder为true，使得最近访问的元素被放在链表的尾部，从而实现近似的LRU策略。**
 
 
 
