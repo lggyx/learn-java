@@ -3,3 +3,4 @@ java-demo.iml
 ./.idea/**
 ./.pytest_cache/**
 __pycache__/
+资料/
