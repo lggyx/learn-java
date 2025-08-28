@@ -505,3 +505,54 @@ TODO：
 
 Java中提供了序列化和反序列化的机制，通过实现`Serializable`接口并使用`ObjectOutputStream`和`ObjectInputStream`类进行对象的序列化和反序列化操作。需要注意的是，被序列化的对象的类必须实现`Serializable`接口，同时要注意类的版本号和成员变量的序列化和反序列化顺序的一致性。
 
+### 反射技术
+
+反射技术是Java中一种强大的功能，它允许程序在运行时动态的获取和操作类的信息。通过反射，可以在运行时通过获取类的名称、方法、字段等信息，动态的创建对象、调用方法、访问和修改字段，以及执行其他与类相关的操作。
+
+1. Class类：代表一个类或接口，在运行时可以通过它获取和操作类的信息，例如获取类的名称、父类、实现的接口、构造函数、方法、字段等
+2. Constructor类：代表类的构造函数，在运行时可以通过它创建对象。
+3. Method类：代表类的方法，在运行时可以通过它调用方法。
+4. Field类：代表类的字段，在运行时可以通过它访问和修改字段的值。
+
+**通过反射，可以实现：**
+
+- 动态创建对象：相当于调用了该类的无参构造函数。
+
+```java
+Class<?> cl=MyClass.class;
+Object obj=cl.newInstance();
+```
+
+- 动态调用方法：通过Method类的invoke（）方法可以调用类的方法，可以传递参数并返回值。
+
+```java
+Class<?> cl=MyClass.class;
+Object obj=cl.newInstance();
+Method method=cl.getMethod("methodName",int.class);
+Object result=method.invoke(obj,123);
+```
+
+- 动态访问和修改字段
+
+```java
+Class<?> cl=MyClass.class;
+Object obj=cl.newInstance();
+Field field =cl.getDeclaredField("fieldName");
+field.setAccessible(true);
+field.set(obj,newValue);
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
