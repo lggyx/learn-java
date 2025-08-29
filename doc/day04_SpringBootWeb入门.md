@@ -113,8 +113,6 @@ public class HelloController {
 }    
 ```
 
-
-
 #### 1.2.3 运行测试
 
 运行SpringBoot自动生成的引导类
@@ -170,14 +168,6 @@ public class HelloController {
 >
 > **答案：http协议**
 
-
-
-
-
-
-
-
-
 ## 2. HTTP协议
 
 ### 2.1 HTTP-概述
@@ -211,10 +201,6 @@ HTTP：Hyper Text Transfer Protocol(超文本传输协议)，规定了浏览器�
 
 **所以，我们学习HTTP主要就是学习请求和响应数据的具体格式内容。**
 
-
-
-
-
 #### 2.2.2 特点
 
 我们刚才初步认识了HTTP协议，那么我们在看看HTTP协议有哪些特点：
@@ -243,10 +229,6 @@ HTTP：Hyper Text Transfer Protocol(超文本传输协议)，规定了浏览器�
   > 具体使用的时候，我们发现京东是可以正常展示数据的，原因是Java早已考虑到这个问题，并提出了使用会话技术(Cookie、Session)来解决这个问题。具体如何来做，我们后面课程中会讲到。
 
   刚才提到HTTP协议是规定了请求和响应数据的格式，那具体的格式是什么呢?
-
-
-
-
 
 ### 2.2 HTTP-请求协议
 
@@ -532,14 +514,6 @@ class Handler extends Thread {
 
 ![](assets/image-20220824233452167.png) 
 
-
-
-
-
-
-
-
-
 ## 3. WEB服务器-Tomcat
 
 ### 3.1 简介
@@ -568,8 +542,6 @@ class Handler extends Thread {
 - 能够接收客户端请求，并根据请求给客户端响应数据
 
 ![1530625192392](assets/1530625192392.png)
-
-
 
 #### 3.1.2 Web服务器
 
@@ -838,10 +810,6 @@ Spring的官方提供了很多现成的starter(起步依赖)，我们在开发�
 每一个起步依赖，都用于开发一个特定的功能。
 
 > 举例：当我们开发中需要使用redis数据库时，只需要在SpringBoot项目中，引入：spring-boot-starter-redis ，即可导入redis开发所需要的依赖。
-
-
-
-
 
 #### 3.3.2 SpringBoot父工程
 

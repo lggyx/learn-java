@@ -38,16 +38,6 @@
 > - 响应
 > - 分层解耦
 
-
-
-
-
-
-
-
-
-
-
 ## 1. 请求
 
 在本章节呢，我们主要讲解，如何接收页面传递过来的请求数据。
@@ -143,12 +133,6 @@
 ![image-20221203115041949](assets/image-20221203115041949.png)
 
 ![image-20221203115110440](assets/image-20221203115110440.png)
-
-
-
-
-
-
 
 ### 1.2 简单参数
 
@@ -367,10 +351,6 @@ Postman测试：
 
 ![image-20221203161004349](assets/image-20221203161004349.png)
 
-
-
-
-
 #### 1.3.2 复杂实体对象
 
 上面我们讲的呢是简单的实体对象，下面我们在来学习下复杂的实体对象。
@@ -481,10 +461,6 @@ Postman测试：
 
 ![image-20221203162706175](assets/image-20221203162706175.png) 
 
-
-
-
-
 ### 1.4 数组集合参数
 
 数组集合参数的使用场景：在HTML的表单中，有一个表单项是支持多选的(复选框)，可以提交选择的多个值。
@@ -499,8 +475,6 @@ Postman测试：
 
 1. 数组
 2. 集合
-
-
 
 #### 1.4.1 数组
 
@@ -1218,10 +1192,6 @@ public class Result {
 >
 > 答案：不会影响。 （程序的扩展性、维护性变得更好了）
 
-
-
-
-
 #### 3.1.2 代码拆分
 
 我们使用三层架构思想，来改造下之前的程序：
@@ -1337,10 +1307,6 @@ public class EmpDaoA implements EmpDao {
 2. 便于维护
 3. 利用扩展
 
-
-
-
-
 ### 3.2 分层解耦
 
 刚才我们学习过程序分层思想了，接下来呢，我们来学习下程序的解耦思想。
@@ -1412,10 +1378,6 @@ public class EmpDaoA implements EmpDao {
 
 IOC容器中创建、管理的对象，称之为：bean对象
 
-
-
-
-
 ### 3.3 IOC&DI
 
 上面我们引出了Spring中IOC和DI的基本概念，下面我们就来具体学习下IOC和DI的代码实现。
@@ -1431,13 +1393,9 @@ IOC容器中创建、管理的对象，称之为：bean对象
      - Controller程序中注入依赖的Service层对象
      - Service程序中注入依赖的Dao层对象
 
-
-
 第1步：删除Controller层、Service层中new对象的代码
 
 ![image-20221204212807207](assets/image-20221204212807207.png)
-
-
 
 第2步：Service层及Dao层的实现类，交给IOC容器管理
 
@@ -1445,15 +1403,11 @@ IOC容器中创建、管理的对象，称之为：bean对象
 
 ![image-20221204213328034](assets/image-20221204213328034.png)
 
-
-
 第3步：为Controller及Service注入运行时依赖的对象
 
 - 使用Spring提供的注解：@Autowired ，就可以实现程序运行时IOC容器自动注入需要的依赖对象
 
 ![image-20221204213859112](assets/image-20221204213859112.png)
-
-
 
 完整的三层代码：
 
@@ -1532,19 +1486,11 @@ public class EmpDaoA implements EmpDao {
 }
 ~~~
 
-
-
 运行测试：
 
 - 启动SpringBoot引导类，打开浏览器，输入：http://localhost:8080/emp.html
 
 ![image-20221204185455556](assets/image-20221204185455556.png)
-
-
-
- 
-
-
 
 #### 3.3.2 IOC详解
 
@@ -1663,10 +1609,6 @@ public class EmpDaoA implements EmpDao {
 > - 声明bean的时候，可以通过value属性指定bean的名字，如果没有指定，默认为类名首字母小写。
 > - 使用以上四个注解都可以声明bean，但是在springboot集成web开发中，声明控制器bean只能用@Controller。
 
-
-
-
-
 ##### 3.3.2.2 组件扫描
 
 问题：使用前面学习的四个注解声明的bean，一定会生效吗？
@@ -1703,10 +1645,6 @@ public class EmpDaoA implements EmpDao {
 
 ![image-20221204225815624](assets/image-20221204225815624.png)
 
-
-
-
-
 #### 3.3.3 DI详解
 
 上一小节我们讲解了控制反转IOC的细节，接下来呢，我们学习依赖注解DI的细节。
@@ -1719,8 +1657,6 @@ public class EmpDaoA implements EmpDao {
 
 > 入门程序举例：在EmpController运行的时候，就要到IOC容器当中去查找EmpService这个类型的对象，而我们的IOC容器中刚好有一个EmpService这个类型的对象，所以就找到了这个类型的对象完成注入操作。
 
-
-
 那如果在IOC容器中，存在多个相同类型的bean对象，会出现什么情况呢？
 
 ![image-20221204232154445](assets/image-20221204232154445.png)
@@ -1728,8 +1664,6 @@ public class EmpDaoA implements EmpDao {
 - 程序运行会报错
 
 ![image-20221204231616724](assets/image-20221204231616724.png)
-
-
 
 如何解决上述问题呢？Spring提供了以下几种解决方案：
 
@@ -1739,13 +1673,9 @@ public class EmpDaoA implements EmpDao {
 
 - @Resource
 
-
-
 使用@Primary注解：当存在多个相同类型的Bean注入时，加上@Primary注解，来确定默认的实现。
 
 ![image-20221204232501679](assets/image-20221204232501679.png) 
-
-
 
 使用@Qualifier注解：指定当前要注入的bean对象。 在@Qualifier的value属性中，指定注入的bean的名称。
 
@@ -1753,13 +1683,9 @@ public class EmpDaoA implements EmpDao {
 
 ![image-20221204233333606](assets/image-20221204233333606.png)
 
-
-
 使用@Resource注解：是按照bean的名称进行注入。通过name属性指定要注入的bean的名称。
 
 ![image-20221204233637735](assets/image-20221204233637735.png)
-
-
 
 > 面试题 ： @Autowird 与 @Resource的区别
 >
