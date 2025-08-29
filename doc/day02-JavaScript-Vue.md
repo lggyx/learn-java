@@ -1437,13 +1437,13 @@ BOM中提供了如下5个对象：
 
 window对象指的是浏览器窗口对象，是JavaScript的全部对象，所以对于window对象，我们可以直接使用，并且对于window对象的方法和属性，我们可以省略window.例如：我们之前学习的alert()函数其实是属于window对象的,其完整的代码如下：
 
-~~~
+~~~js
 window.alert('hello');
 ~~~
 
 其可以省略window.  所以可以简写成
 
-~~~
+~~~js
 alert('hello')
 ~~~
 
