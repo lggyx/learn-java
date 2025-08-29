@@ -14,5 +14,5 @@
 | day06-MySQL                   | 100% | 2025/8/29 |
 | day07-MySQL                   | 100% | 2025/8/29 |
 | day08-MySQL-Mybatis入门       | 100% | 2025/8/29 |
-|                               |      |           |
+| day09-Mybatis                 |      |           |
 
