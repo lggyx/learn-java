@@ -57,7 +57,11 @@ Ajax: 全称Asynchronous JavaScript And XML，异步的JavaScript和XML。其作
 
 - 服务器端
 
-  因为我们暂时还没学过服务器端的代码，所以此处已经直接提供好了服务器端的请求地址，我们前端直接通过Ajax请求访问该地址即可。**后台服务器地址**：http://yapi.smart-xwork.cn/mock/169327/emp/list
+  因为我们暂时还没学过服务器端的代码，所以此处已经直接提供好了服务器端的请求地址，我们前端直接通过Ajax请求访问该地址即可。
+
+  **后台服务器地址**：http://yapi.smart-xwork.cn/mock/169327/emp/list
+
+  **本地部署服务器地址**：http://localhost:10010/emp/list
 
   上述地址我们也可以直接通过浏览器来访问，访问结果如图所示：只截取部分数据
 
