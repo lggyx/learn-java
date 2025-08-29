@@ -8,12 +8,6 @@
 >
 > 3. Web服务器-Tomcat
 
-
-
-
-
-
-
 ## 前言
 
 ![image-20221130095316032](assets/image-20221130095316032.png)
@@ -36,13 +30,9 @@ Spring发展到今天已经形成了一种开发生态圈，Spring提供了若�
 
 ![](assets/image-20220617222609699.png)
 
-
-
 而Spring家族旗下这么多的技术，最基础、最核心的是 SpringFramework。其他的spring家族的技术，都是基于SpringFramework的，SpringFramework中提供很多实用功能，如：依赖注入、事务管理、web开发支持、数据访问、消息服务等等。
 
 ![](assets/image-20220617224427947.png)
-
-
 
 而如果我们在项目中，直接基于SpringFramework进行开发，存在两个问题：配置繁琐、入门难度大。 
 
@@ -57,15 +47,7 @@ Spring发展到今天已经形成了一种开发生态圈，Spring提供了若�
 
 **Spring Boot 可以帮助我们非常快速的构建应用程序、简化开发、提高效率 。**
 
-
-
-
-
 接下来，我们就直接通过一个SpringBoot的web入门程序，让大家快速感受一下，基于SpringBoot进行Web开发的便捷性。
-
-
-
-
 
 ## 1. SpringBootWeb快速入门
 
@@ -84,8 +66,6 @@ Spring发展到今天已经形成了一种开发生态圈，Spring提供了若�
 第2步：定义HelloController类，添加方法hello，并添加注解
 
 第3步：测试运行
-
-
 
 #### 1.2.1 创建SpringBoot工程（需要联网）
 

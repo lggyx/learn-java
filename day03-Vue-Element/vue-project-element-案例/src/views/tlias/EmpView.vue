@@ -108,7 +108,7 @@ export default {
     },
     mounted () {
         //发送异步请求,获取数据
-        axios.get("http://yapi.smart-xwork.cn/mock/169327/emp/list").then((result) => {
+        axios.get("http://localhost:10010/emp/list").then((result) => {
             this.tableData = result.data.data;  
         });
     }

@@ -11,14 +11,6 @@
 > 4. 依赖管理
 >
 
-
-
-
-
-
-
-
-
 ## 01. Maven课程介绍
 
 ### 1.1 课程安排
@@ -28,8 +20,6 @@
 ![image-20221130095316032](assets/image-20221130095316032.png)
 
 后端Web开发技术的学习，我们会先学习Java项目的构建工具：Maven
-
-
 
 ### 1.2 初识Maven
 
@@ -43,8 +33,6 @@ Maven是Apache旗下的一个开源项目，是一款用于管理和构建java�
 >
 > 开源项目：https://www.apache.org/index.html#projects-list
 
-
-
 #### 1.2.2 Maven的作用
 
 使用Maven能够做什么呢？
@@ -52,8 +40,6 @@ Maven是Apache旗下的一个开源项目，是一款用于管理和构建java�
 1. 依赖管理
 2. 统一项目结构
 3. 项目构建
-
-
 
 **依赖管理**：
 
@@ -90,11 +76,9 @@ Maven是Apache旗下的一个开源项目，是一款用于管理和构建java�
 > - src/test/java: 测试代码
 > - src/test/resources: 测试配置文件信息
 
-
-
 **项目构建 :** 
 
-- maven提供了标准的、跨平台(Linux、Windows、MacOS) 的自动化项目构建方式
+- **maven**提供了标准的、跨平台(Linux、Windows、MacOS) 的自动化项目构建方式
 
 <img src="assets/image-20221130140247524.png" alt="image-20221130140247524" style="zoom:67%;" />
 
@@ -103,12 +87,6 @@ Maven是Apache旗下的一个开源项目，是一款用于管理和构建java�
 ![image-20221130222907628](assets/image-20221130222907628.png)
 
 综上所述，可以得到一个结论：**Maven是一款管理和构建java项目的工具**
-
-
-
-
-
-
 
 ## 02. Maven概述
 
@@ -124,15 +102,11 @@ Maven的作用：
 2. 统一的项目结构
 3. 标准的项目构建流程
 
-
-
 ### 2.2 Maven模型
 
 * 项目对象模型 (Project Object Model)
 * 依赖管理模型(Dependency)
 * 构建生命周期/阶段(Build lifecycle & phases)
-
-
 
 1). 构建生命周期/阶段(Build lifecycle & phases)
 
@@ -194,12 +168,6 @@ Maven仓库分为：
 
 如果还可以搭建远程仓库(私服)，将来jar包的查找顺序则变为： 本地仓库 --> 远程仓库--> 中央仓库
 
-
-
-
-
-
-
 ### 2.4 Maven安装
 
 认识了Maven后，我们就要开始使用Maven了，那么首先我们要进行Maven的下载与安装。
@@ -212,8 +180,6 @@ Maven仓库分为：
 
 ![image-20220616100211209](assets/image-20220616100211209.png) 
 
-
-
 #### 2.4.2 安装步骤
 
 Maven安装配置步骤：
@@ -221,8 +187,6 @@ Maven安装配置步骤：
 1. 解压安装
 2. 配置仓库
 3. 配置Maven环境变量
-
-
 
 **1、解压 apache-maven-3.6.1-bin.zip（解压即安装）**
 
@@ -238,15 +202,11 @@ Maven安装配置步骤：
 * conf目录 ：存放Maven的配置文件。（settings.xml配置文件后期需要修改）
 * lib目录 ：存放Maven依赖的jar包。（Maven也是使用java开发的，所以它也依赖其他的jar包）
 
-
-
 **2、配置本地仓库**
 
 2.1、在自己计算机上新一个目录（本地仓库，用来存储jar包）
 
 ![image-20221130231857537](assets/image-20221130231857537.png) 
-
-
 
 2.2、进入到conf目录下修改settings.xml配置文件 
 
@@ -299,8 +259,6 @@ Maven安装配置步骤：
 
 <img src="assets/image-20220616102344350.png" style="zoom:80%;" />
 
-
-
 2). 在Path中进行配置
 
 - PATH环境变量的值，设置为：%MAVEN_HOME%\bin
@@ -315,13 +273,7 @@ Maven安装配置步骤：
 mvn -v
 ```
 
-![image-20220616102554143](assets/image-20220616102554143.png) 
-
-
-
-
-
-
+![image-20220616102554143](assets/image-20220616102554143.png)
 
 ## 03. IDEA集成Maven
 
@@ -687,10 +639,6 @@ File  =>  Project Structure  =>  Modules  =>  +  =>  Import Module
 
 ![image-20221201142501556](assets/image-20221201142501556.png)
 
- 
-
-
-
 ### 4.3 依赖范围
 
 在项目中导入依赖的jar包后，默认情况下，可以在任何地方使用。
@@ -721,10 +669,6 @@ scope标签的取值范围：
 | test            | -          | Y            | -                | junit       |
 | provided        | Y          | Y            | -                | servlet-api |
 | runtime         | -          | Y            | Y                | jdbc驱动    |
-
-
-
-
 
 ### 4.4 生命周期
 
@@ -784,16 +728,12 @@ IDEA工具为了方便程序员使用maven生命周期，在右侧的maven工具
 >
 > ​		clean不会运行，compile会运行。  因为compile与package属于同一套生命周期，而clean与package不属于同一套生命周期。
 
-
-
 #### 4.4.2 执行
 
 在日常开发中，当我们要执行指定的生命周期时，有两种执行方式：
 
 1. 在idea工具右侧的maven工具栏中，选择对应的生命周期，双击执行
 2. 在DOS命令行中，通过maven命令执行
-
-
 
 **方式一：在idea中执行生命周期**
 
@@ -841,12 +781,6 @@ clean：
 
 ![image-20221201172914648](assets/image-20221201172914648.png) 
 
-
-
-
-
- 
-
 ## 05. 附录
 
 ### 5.1 更新依赖索引
@@ -857,27 +791,11 @@ clean：
 
 ![1537786634456](assets/1537786634456-1582625518984.png)
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ### 5.2 清理maven仓库
 
 初始情况下，我们的本地仓库是没有任何jar包的，此时会从私服去下载（如果没有配置，就直接从中央仓库去下载），可能由于网络的原因，jar包下载不完全，这些不完整的jar包都是以lastUpdated结尾。此时，maven不会再重新帮你下载，需要你删除这些以lastUpdated结尾的文件，然后maven才会再次自动下载这些jar包。
 
 ![lastUpdate](assets/lastUpdated-1582625518983.png)
-
-
 
 如果本地仓库中有很多这样的以lastUpadted结尾的文件，可以定义一个批处理文件，在其中编写如下脚本来删除： 
 
@@ -891,8 +809,6 @@ rem 搜索完毕
 pause
 ~~~
 
-
-
 操作步骤如下：
 
 1). 定义批处理文件del_lastUpdated.bat  (直接创建一个文本文件，命名为del_lastUpdated，后缀名直接改为bat即可 )
@@ -904,8 +820,3 @@ pause
 ![image-20221214154559817](assets/image-20221214154559817.png) 
 
 修改完毕后，双击运行即可删除maven仓库中的残留文件。
-
-
-
-
-

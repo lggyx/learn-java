@@ -349,6 +349,8 @@ axios.post("http://yapi.smart-xwork.cn/mock/169327/emp/deleteById","id=1").then(
 
   其中数据是来自于后台程序的，地址是：http://yapi.smart-xwork.cn/mock/169327/emp/list
 
+  或者http://localhost:10010/emp/list
+
   
 
 - 分析：
@@ -573,7 +575,7 @@ axios.post("http://yapi.smart-xwork.cn/mock/169327/emp/deleteById","id=1").then(
 
 
 
-## 2.2 YAPI
+## 2.2 YAPI（**已失效，不用看**）
 
 ### 2.2.1 YAPI介绍
 
@@ -581,7 +583,9 @@ axios.post("http://yapi.smart-xwork.cn/mock/169327/emp/deleteById","id=1").then(
 
 YApi 是高效、易用、功能强大的 api 管理平台，旨在为开发、产品、测试人员提供更优雅的接口管理服务。
 
-其官网地址：http://yapi.smart-xwork.cn/
+~~其官网地址：http://yapi.smart-xwork.cn/~~
+
+这个官网已经失效了
 
 YApi主要提供了2个功能：
 
@@ -778,8 +782,6 @@ vue项目的标准目录结构以及目录对应的解释如下图所示:
 ![1669302973198](assets/1669302973198.png)
 
 其中我们平时开发代码就是在**src目录**下
-
-
 
 #### 3.2.2.3 运行vue项目
 
@@ -1496,54 +1498,51 @@ Form 表单：由输入框、选择器、单选框、多选框等控件组成，
 
 还需要注意的是，针对这个新的对话框，我们需要在data中声明新的变量dialogFormVisible来控制对话框的隐藏与显示，代码如下：
 
-~~~
+~~~xml
  dialogFormVisible: false,
 ~~~
 
 打开浏览器，此时呈现如图所示的效果：
 
-![1669370230214](assets/1669370230214.png) 
-
-
+![1669370230214](assets/1669370230214.png)
 
 然后我们**复制官网提供的template部分代码到我们的vue组件文件的Dialog组件中**，但是，此处官方提供的表单项标签太多，所以我们只需要保留前面3个表单项组件，其他多余的删除，所以最终template部分代码如下：
 
 ~~~html
-<el-dialog title="Form表单" :visible.sync="dialogFormVisible">
-            
-            <el-form ref="form" :model="form" label-width="80px">
-                <el-form-item label="活动名称">
-                    <el-input v-model="form.name"></el-input>
-                </el-form-item>
-                <el-form-item label="活动区域">
-                    <el-select v-model="form.region" placeholder="请选择活动区域">
-                    <el-option label="区域一" value="shanghai"></el-option>
-                    <el-option label="区域二" value="beijing"></el-option>
-                    </el-select>
-                </el-form-item>
-                <el-form-item label="活动时间">
-                    <el-col :span="11">
-                    <el-date-picker type="date" placeholder="选择日期" v-model="form.date1" style="width: 100%;"></el-date-picker>
-                    </el-col>
-                    <el-col class="line" :span="2">-</el-col>
-                    <el-col :span="11">
-                    <el-time-picker placeholder="选择时间" v-model="form.date2" style="width: 100%;"></el-time-picker>
-                    </el-col>
-                </el-form-item>
-            
-                <el-form-item>
-                    <el-button type="primary" @click="onSubmit">立即创建</el-button>
-                    <el-button>取消</el-button>
-                </el-form-item>
-            </el-form>
-        </el-dialog>
+    <el-dialog title="Form表单" :visible.sync="dialogFormVisible">
+      <el-form ref="form" :model="form" label-width="80px">
+        <el-form-item label="活动名称">
+          <el-input v-model="form.name"></el-input>
+        </el-form-item>
+        <el-form-item label="活动区域">
+          <el-select v-model="form.region" placeholder="请选择活动区域">
+            <el-option label="区域一" value="shanghai"></el-option>
+            <el-option label="区域二" value="beijing"></el-option>
+          </el-select>
+        </el-form-item>
+        <el-form-item label="活动时间">
+          <el-col :span="11">
+            <el-date-picker type="date" placeholder="选择日期" v-model="form.date1"
+                            style="width: 100%;"></el-date-picker>
+          </el-col>
+          <el-col class="line" :span="2">-</el-col>
+          <el-col :span="11">
+            <el-time-picker placeholder="选择时间" v-model="form.date2" style="width: 100%;"></el-time-picker>
+          </el-col>
+        </el-form-item>
+        <el-form-item>
+          <el-button type="primary" @click="onSubmit">立即创建</el-button>
+          <el-button>取消</el-button>
+        </el-form-item>
+      </el-form>
+    </el-dialog>
 ~~~
 
 观察上述代码，我们发现其中表单项标签使用了v-model双向绑定，所以我们需要在vue的数据模型中声明变量，同样可以从官方提供的代码中复制粘贴，但是我们需要去掉我们不需要的属性，通过观察上述代码，我们发现双向绑定的属性有4个，分别是form.name,form.region,form.date1,form.date2,所以最终数据模型如下：
 
 ![1669371003680](assets/1669371003680.png)
 
-~~~
+~~~js
  form: {
           name: '',
           region: '',
@@ -1558,7 +1557,7 @@ Form 表单：由输入框、选择器、单选框、多选框等控件组成，
 
 
 
-~~~
+~~~js
  onSubmit() {
        console.log(this.form); //输出表单内容到控制台
         this.dialogFormVisible=false; //关闭表案例的对话框
@@ -1761,17 +1760,15 @@ export default {
 
    ![1669373639681](assets/1669373639681.png)
 
-
-
-
-
 数据Mock地址：http://yapi.smart-xwork.cn/mock/169327/emp/list，浏览器打开，数据格式如下图所示：
+
+```
+http://localhost:10010/emp/list
+```
 
 ![1669373386131](assets/1669373386131.png) 
 
 通过观察数据，我们发现返回的json数据的data属性中，才是返回的人员列表信息
-
-
 
 ### 4.4.2 案例分析
 
@@ -1823,8 +1820,6 @@ export default {
 ~~~
 
 打开浏览器，我们发现之前的element案例内容没了，从而呈现的是一片空白，那么接下来我们就可以继续开发了。
-
-
 
 #### 4.4.3.2 整体布局
 
@@ -1903,8 +1898,6 @@ export default {
 
 ~~~
 
-
-
 #### 4.4.3.4 左侧导航栏
 
 接下来我们来实现左侧导航栏，那么还是在上述布局组件中提供的案例，找到左侧栏的案例，如下图所示：
@@ -1976,8 +1969,6 @@ export default {
 </style>
 
 ~~~
-
-
 
 #### 4.4.3.5 右侧核心内容
 
@@ -2724,7 +2715,7 @@ export default {
 
 首先我们需要先安装vue-router插件，可以通过如下命令
 
-~~~
+~~~bash
 npm install vue-router@3.5.1
 ~~~
 

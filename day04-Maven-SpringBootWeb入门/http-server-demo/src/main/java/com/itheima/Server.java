@@ -12,11 +12,9 @@ public class Server {
     public static void main(String[] args) throws IOException {
         ServerSocket ss = new ServerSocket(8080); // 监听指定端口
         System.out.println("server is running...");
-
-        while (true){
+        while (true) {
             Socket sock = ss.accept();
             System.out.println("connected from " + sock.getRemoteSocketAddress());
-
             //开启线程处理请求
             Thread t = new Handler(sock);
             t.start();
@@ -26,14 +24,13 @@ public class Server {
 
 class Handler extends Thread {
     Socket sock;
-
     public Handler(Socket sock) {
         this.sock = sock;
     }
 
     public void run() {
         try (InputStream input = this.sock.getInputStream(); OutputStream output = this.sock.getOutputStream()) {
-                handle(input, output);
+            handle(input, output);
         } catch (Exception e) {
             try {
                 this.sock.close();
@@ -46,15 +43,13 @@ class Handler extends Thread {
     private void handle(InputStream input, OutputStream output) throws IOException {
         BufferedReader reader = new BufferedReader(new InputStreamReader(input, StandardCharsets.UTF_8));
         BufferedWriter writer = new BufferedWriter(new OutputStreamWriter(output, StandardCharsets.UTF_8));
-
         // 读取HTTP请求:
         boolean requestOk = false;
         String first = reader.readLine();
         if (first.startsWith("GET / HTTP/1.")) {
             requestOk = true;
         }
-
-        for (;;) {
+        for (; ; ) {
             String header = reader.readLine();
             if (header.isEmpty()) { // 读取到空行时, HTTP Header读取完毕
                 break;
@@ -62,7 +57,6 @@ class Handler extends Thread {
             System.out.println(header);
         }
         System.out.println(requestOk ? "Response OK" : "Response Error");
-
         if (!requestOk) {// 发送错误响应:
             writer.write("HTTP/1.0 404 Not Found\r\n");
             writer.write("Content-Length: 0\r\n");
@@ -74,7 +68,7 @@ class Handler extends Thread {
             BufferedReader br = new BufferedReader(new InputStreamReader(is));
             StringBuilder data = new StringBuilder();
             String line = null;
-            while ((line = br.readLine()) != null){
+            while ((line = br.readLine()) != null) {
                 data.append(line);
             }
             br.close();
