@@ -19,4 +19,10 @@ public class DeptServiceImpl implements DeptService {
         List<Dept> list = deptMapper.list();
         return list;
     }
+
+    @Override
+    public boolean delete(Integer id) {
+        int count = deptMapper.delete(id);
+        return count == 1;
+    }
 }
