@@ -1,0 +1,4 @@
+
+-Dconf.file=../../../sonatype-work/replicator/etc/config.yml
+-Dlog.dir=../../../sonatype-work/replicator/logs
+        

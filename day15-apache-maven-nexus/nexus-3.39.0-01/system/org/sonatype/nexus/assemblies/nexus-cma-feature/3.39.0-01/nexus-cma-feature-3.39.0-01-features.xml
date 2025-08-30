@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.6.0" name="nexus-cma-feature">
+    <feature name="nexus-cma-feature" description="org.sonatype.nexus.assemblies:nexus-cma-feature" install="featureFlag:enabledByDefault:nexus.orient.enabled" version="3.39.0.01">
+        <details>org.sonatype.nexus.assemblies:nexus-cma-feature</details>
+        <feature version="3.39.0.01">nexus-restore-maven</feature>
+        <feature version="3.39.0.01">nexus-restore-raw</feature>
+    </feature>
+    <feature name="nexus-restore-maven" description="org.sonatype.nexus.plugins:nexus-restore-maven" version="3.39.0.01">
+        <details>org.sonatype.nexus.plugins:nexus-restore-maven</details>
+        <bundle>mvn:org.sonatype.nexus.plugins/nexus-restore-maven/3.39.0-01</bundle>
+    </feature>
+    <feature name="nexus-restore-raw" description="org.sonatype.nexus.plugins:nexus-restore-raw" version="3.39.0.01">
+        <details>org.sonatype.nexus.plugins:nexus-restore-raw</details>
+        <bundle>mvn:org.sonatype.nexus.plugins/nexus-restore-raw/3.39.0-01</bundle>
+    </feature>
+</features>

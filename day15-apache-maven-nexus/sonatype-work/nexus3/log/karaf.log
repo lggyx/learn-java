@@ -1,0 +1,30 @@
+六月 01, 2022 10:36:51 上午 org.apache.karaf.main.Main launch
+信息: Installing and starting initial bundles
+六月 01, 2022 10:36:51 上午 org.apache.karaf.main.Main launch
+信息: All initial bundles installed and set to start
+六月 01, 2022 10:36:52 上午 org.apache.karaf.main.Main$KarafLockCallback lockAcquired
+信息: Lock acquired. Setting startlevel to 100
+六月 01, 2022 10:31:37 下午 org.apache.karaf.main.Main launch
+信息: Installing and starting initial bundles
+六月 01, 2022 10:31:38 下午 org.apache.karaf.main.Main launch
+信息: All initial bundles installed and set to start
+六月 01, 2022 10:31:38 下午 org.apache.karaf.main.Main$KarafLockCallback lockAcquired
+信息: Lock acquired. Setting startlevel to 100
+七月 02, 2022 11:19:26 上午 org.apache.karaf.main.Main launch
+信息: Installing and starting initial bundles
+七月 02, 2022 11:19:27 上午 org.apache.karaf.main.Main launch
+信息: All initial bundles installed and set to start
+七月 02, 2022 11:19:27 上午 org.apache.karaf.main.Main$KarafLockCallback lockAcquired
+信息: Lock acquired. Setting startlevel to 100
+七月 02, 2022 11:20:09 上午 org.apache.karaf.main.Main launch
+信息: Installing and starting initial bundles
+七月 02, 2022 11:20:10 上午 org.apache.karaf.main.Main launch
+信息: All initial bundles installed and set to start
+七月 02, 2022 11:20:10 上午 org.apache.karaf.main.Main$KarafLockCallback lockAcquired
+信息: Lock acquired. Setting startlevel to 100
+一月 01, 2023 10:40:31 下午 org.apache.karaf.main.Main launch
+信息: Installing and starting initial bundles
+一月 01, 2023 10:40:32 下午 org.apache.karaf.main.Main launch
+信息: All initial bundles installed and set to start
+一月 01, 2023 10:40:32 下午 org.apache.karaf.main.Main$KarafLockCallback lockAcquired
+信息: Lock acquired. Setting startlevel to 100

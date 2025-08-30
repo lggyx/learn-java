@@ -1,0 +1,31 @@
+# Configure to match your environment and move to sonatype-work/replicator/etc.
+# See https://help.sonatype.com/repomanager3/repository-management/repository-replication/running-replicator
+#
+#rsyncExecutable: rsync
+#awsExecutable: aws
+#syncBatchSize: 10
+#debug: false
+#interval: 1
+#sources:
+#  - path: /data/newyork/sonatype-work/nexus3/blobs/default
+#    type: file
+#    targets:
+#      - path: /data/singapore/sonatype-work/nexus3/blobs/default
+#        type: file
+#        repositoryName: rawtarget
+#        connectionName: ny-to-singapore-replication
+#      - path: /data/london/sonatype-work/nexus3/blobs/default
+#        type: file
+#        repositoryName: rawtarget
+#        connectionName: ny-to-london-replication
+#  - path: /data/newyork/sonatype-work/nexus3/blobs/blobstore2
+#    type: file
+#    targets:
+#      - path: /data/singapore/sonatype-work/nexus3/blobs/blobstore2
+#        type: file
+#        repositoryName: maventarget
+#        connectionName: ny-to-singapore-maven-replication
+#      - path: /data/london/sonatype-work/nexus3/blobs/blobstore2
+#        type: file
+#        repositoryName: maventarget
+#        connectionName: ny-to-london-maven-replication

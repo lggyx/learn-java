@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<features xmlns="http://karaf.apache.org/xmlns/features/v1.6.0" name="nexus-startup-feature">
+    <feature name="nexus-startup-feature" description="org.sonatype.nexus.assemblies:nexus-startup-feature" version="3.39.0.01">
+        <details>org.sonatype.nexus.assemblies:nexus-startup-feature</details>
+        <bundle start-level="9">mvn:org.sonatype.nexus/nexus-pax-logging/3.39.0-01</bundle>
+        <bundle start-level="8">mvn:org.ops4j.pax.logging/pax-logging-api/2.0.14</bundle>
+        <bundle start-level="8">mvn:org.sonatype.nexus/nexus-task-logging/3.39.0-01</bundle>
+        <bundle start-level="8">mvn:com.google.guava/guava/30.1.1-jre</bundle>
+        <bundle start-level="8">mvn:com.google.guava/failureaccess/1.0.1</bundle>
+        <bundle start-level="8">mvn:commons-io/commons-io/2.8.0</bundle>
+        <bundle start-level="8">mvn:io.dropwizard.metrics/metrics-logback/4.1.0</bundle>
+        <bundle start-level="8">mvn:io.dropwizard.metrics/metrics-core/4.1.0</bundle>
+        <bundle start-level="8">mvn:org.sonatype.nexus/nexus-features/3.39.0-01</bundle>
+        <bundle start-level="8">mvn:javax.servlet/javax.servlet-api/3.1.0</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-webapp/9.4.43.v20210629</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-continuation/9.4.43.v20210629</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-servlet/9.4.43.v20210629</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-security/9.4.43.v20210629</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-server/9.4.43.v20210629</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-deploy/9.4.43.v20210629</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-util/9.4.43.v20210629</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-util-ajax/9.4.43.v20210629</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-servlets/9.4.43.v20210629</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-proxy/9.4.43.v20210629</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-client/9.4.43.v20210629</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-http/9.4.43.v20210629</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-io/9.4.43.v20210629</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-xml/9.4.43.v20210629</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-jmx/9.4.43.v20210629</bundle>
+        <bundle start-level="8">mvn:org.eclipse.jetty/jetty-rewrite/9.4.43.v20210629</bundle>
+        <bundle start-level="8">mvn:io.dropwizard.metrics/metrics-jetty9/4.1.0</bundle>
+        <bundle start-level="8">mvn:org.apache.felix/org.apache.felix.metatype/1.2.2</bundle>
+        <bundle start-level="8">mvn:io.prometheus/simpleclient/0.6.0</bundle>
+        <bundle start-level="8">mvn:io.prometheus/simpleclient_servlet/0.6.0</bundle>
+        <bundle start-level="8">mvn:io.prometheus/simpleclient_common/0.6.0</bundle>
+        <bundle start-level="8">mvn:org.apache.servicemix.specs/org.apache.servicemix.specs.activation-api-1.1/2.9.0</bundle>
+        <bundle start-level="8">mvn:org.apache.servicemix.bundles/org.apache.servicemix.bundles.javax-inject/1_2</bundle>
+        <bundle start-level="8">mvn:net.java.dev.jna/jna/5.10.0</bundle>
+    </feature>
+</features>
