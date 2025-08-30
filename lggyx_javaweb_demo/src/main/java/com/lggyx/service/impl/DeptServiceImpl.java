@@ -1,9 +1,22 @@
 package com.lggyx.service.impl;
 
+import com.lggyx.mapper.DeptMapper;
+import com.lggyx.pojo.Dept;
+import com.lggyx.service.DeptService;
 import lombok.extern.slf4j.Slf4j;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
+
+import java.util.List;
 
 @Slf4j
 @Service
-public class DeptServiceImpl {
+public class DeptServiceImpl implements DeptService {
+    @Autowired
+    private DeptMapper deptMapper;
+    @Override
+    public List<Dept> list() {
+        List<Dept> list = deptMapper.list();
+        return list;
+    }
 }
