@@ -14,6 +14,6 @@ public interface EmpMapper {
     public Long count();
 
     //获取当前页的结果列表
-    @Select("select * from emp limit #{start}, #{pageSize}")
-    public List<Emp> list(Integer start, Integer pageSize);
+    @Select("select * from emp")
+    public List<Emp> list();
 }
