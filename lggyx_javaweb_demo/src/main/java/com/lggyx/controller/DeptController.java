@@ -14,17 +14,20 @@ import java.util.List;
 public class DeptController {
     @Autowired
     private DeptService deptService;
+
     @GetMapping("/depts")
     public Result list() {
         log.info("部门列表数据查询");
         List<Dept> list = deptService.list();
         return Result.success(list);
     }
+
     @DeleteMapping("/depts/{id}")
     public Result delete(@PathVariable Integer id) {
         log.info("部门删除:"+ id.toString());
         return deptService.delete(id) ? Result.success() : Result.error("部门删除失败");
     }
+
     @PostMapping("/depts")
     public Result add(@RequestBody Dept dept) {
         log.info("部门添加:"+ dept.getName());
