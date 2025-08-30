@@ -15,6 +15,13 @@ class SpringbootMybatisQuickstartApplicationTests {
     private UserMapper userMapper;
 
     @Test
+    public void testList(){
+        List<User> users = userMapper.list();
+        for (User user : users) {
+            System.out.println(user);
+        }
+    }
+    @Test
     public void testListUser(){
         List<User> userList = userMapper.list();
         userList.stream().forEach(user -> {
