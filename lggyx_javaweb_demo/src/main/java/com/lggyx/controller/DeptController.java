@@ -5,10 +5,7 @@ import com.lggyx.pojo.Result;
 import com.lggyx.service.DeptService;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.web.bind.annotation.DeleteMapping;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
 
@@ -25,7 +22,12 @@ public class DeptController {
     }
     @DeleteMapping("/depts/{id}")
     public Result delete(@PathVariable Integer id) {
-        log.info("部门删除"+ id.toString());
+        log.info("部门删除:"+ id.toString());
         return deptService.delete(id) ? Result.success() : Result.error("部门删除失败");
+    }
+    @PostMapping("/depts")
+    public Result add(@RequestBody Dept dept) {
+        log.info("部门添加:"+ dept.getName());
+        return deptService.add(dept) ? Result.success() : Result.error("部门添加失败");
     }
 }
